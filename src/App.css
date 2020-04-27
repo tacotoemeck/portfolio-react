@@ -1,38 +1,119 @@
+:root {
+  --main-bg-color: rgb(230, 230, 230);
+}
+/*
+html {
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax-wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20vh;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
+
+.parallax-wrapper::before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url("/trianglify.png");
+  position: absolute;
+  z-index: -1;
+  transform: translateZ(-1px) scale(2);
+}
+
+.regular-wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20vh;
+  background-color: var(--main-bg-color);
+  position: relative;
+  z-index: 2;
+}
+
 .App {
   text-align: center;
+  height: 80vh;
+  width: 100vw;
+} */
+
+html {
+  overflow: hidden;
+}
+body {
+  margin: 0;
+  font-size: 26px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #ffffff;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax-wrapper {
+  width: 100vw;
+  padding-top: 30vh;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
+.parallax-wrapper::before {
+  content: "";
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  background: linear-gradient(
+    360deg,
+    rgba(38, 0, 0, 0.9) -28.58%,
+    rgba(119, 79, 56, 0.7) 93.05%
+  );
+
+  position: absolute;
+  z-index: -1;
+  transform: translateZ(-1px) scale(2);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-header_img {
+  content: "";
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform: translateZ(-1px) scale(2);
+  z-index: -2;
+  object-fit: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.regular-wrapper {
+  width: 100vw;
+  /* height: 100vh;
+  padding-top: 30vh; */
+  background-image: url("/trianglify2.png");
+  z-index: 2;
+  position: relative;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App {
+  margin: 0 auto;
+  padding: 50px;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-bg-color);
 }
