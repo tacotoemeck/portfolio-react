@@ -1,4 +1,6 @@
 import React from "react";
+import Header from "./components/Header";
+import CardBox from "./components/CardBox";
 import "./App.css";
 
 function App() {
@@ -12,8 +14,19 @@ function App() {
               src={require("./img/trees.jpeg")}
               alt="background forest"
             />
+            <Header />
           </header>
-          <main className="mainBody">{/* components including  */}</main>
+          <main className="mainBody">
+            <CardBox buttonValue="See more " />
+            <CardBox buttonValue="See more " />
+            <CardBox buttonValue="See more" />
+            <CardBox buttonValue="See more" />
+            <CardBox buttonValue="See more" />
+            <CardBox buttonValue="See more" />
+            <CardBox buttonValue="See more" />
+            <CardBox buttonValue="See more" />
+            <CardBox buttonValue="See more" />
+          </main>
           <footer className="footer"></footer>
         </div>
       </div>

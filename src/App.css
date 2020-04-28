@@ -1,57 +1,8 @@
 :root {
   --main-bg-color: rgb(230, 230, 230);
+  --color-brighter: rgba(119, 79, 56, 0.7);
+  --color-darker: rgba(38, 0, 0, 0.9);
 }
-/*
-html {
-  overflow: hidden;
-}
-
-body {
-  height: 100vh;
-  perspective: 1px;
-  transform-style: preserve-3d;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective: 1px;
-  transform-style: preserve-3d;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-.parallax-wrapper {
-  width: 100vw;
-  height: 100vh;
-  padding-top: 20vh;
-  box-sizing: border-box;
-  transform-style: preserve-3d;
-}
-
-.parallax-wrapper::before {
-  content: "";
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-image: url("/trianglify.png");
-  position: absolute;
-  z-index: -1;
-  transform: translateZ(-1px) scale(2);
-}
-
-.regular-wrapper {
-  width: 100vw;
-  height: 100vh;
-  padding-top: 20vh;
-  background-color: var(--main-bg-color);
-  position: relative;
-  z-index: 2;
-}
-
-.App {
-  text-align: center;
-  height: 80vh;
-  width: 100vw;
-} */
 
 html {
   overflow: hidden;
@@ -68,9 +19,12 @@ body {
 }
 .parallax-wrapper {
   width: 100vw;
-  padding-top: 30vh;
+  padding-top: 65vh;
   box-sizing: border-box;
   transform-style: preserve-3d;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 .parallax-wrapper::before {
   content: "";
@@ -78,11 +32,10 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-
   background: linear-gradient(
     360deg,
-    rgba(38, 0, 0, 0.9) -28.58%,
-    rgba(119, 79, 56, 0.7) 93.05%
+    var(--color-darker) -28.58%,
+    var(--color-brighter) 93.05%
   );
 
   position: absolute;
@@ -104,16 +57,54 @@ body {
 
 .regular-wrapper {
   width: 100vw;
-  /* height: 100vh;
-  padding-top: 30vh; */
   background-image: url("/trianglify2.png");
   z-index: 2;
   position: relative;
 }
 .App {
   margin: 0 auto;
-  padding: 50px;
+  /* padding: 4rem; */
   width: 100vw;
-  height: 100vh;
+  padding-bottom: 10rem;
+  /* height: 100vh; */
   background-color: var(--main-bg-color);
+  display: flex;
+}
+
+.mainBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95vw;
+  margin-top: -5rem;
+  padding: 2rem;
+}
+
+@media (min-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+}
+@media (min-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .parallax-wrapper {
+    padding-top: 40vh;
+  }
+}
+@media (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+}
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .mainBody {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: start;
+    justify-content: center;
+  }
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
 }
