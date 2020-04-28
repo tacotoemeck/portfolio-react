@@ -9,25 +9,40 @@
   position: relative;
 }
 
+.InnerCardBox {
+  height: 90%;
+}
+
 .CarBoxExpandButton {
-  position: absolute;
   bottom: 0;
   right: 0;
-  margin: 1rem;
-  margin-right: 0.5rem;
+
   background: none;
   border: none;
   cursor: pointer;
   height: 1.5rem;
   line-height: 1.5rem;
+  font-weight: bold;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  width: 35%;
+  width: 95%;
+  font-family: "Rajdhani", sans-serif;
 }
 
 .CarBoxExpandButton__arrow {
+  color: var(--color-main);
   height: 1rem;
+}
+
+.CarBoxExpandButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
 }
 
 .CarBoxExpandButton:hover .CarBoxExpandButton__arrow {

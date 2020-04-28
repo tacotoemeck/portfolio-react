@@ -17,8 +17,19 @@ function App() {
             <Header />
           </header>
           <main className="mainBody">
-            <CardBox buttonValue="See more " />
-            <CardBox buttonValue="See more " />
+            <CardBox
+              buttonValue="See more "
+              image="https://images.unsplash.com/photo-1471115853179-bb1d604434e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+              subtitle="About Me"
+              subtitleClass="title"
+            />
+            <CardBox
+              buttonValue="See more"
+              title="Developer Profile"
+              subtitle="📍 London, UK"
+              subtitleClass=""
+              bottomBackground="brown"
+            />
             <CardBox buttonValue="See more" />
             <CardBox buttonValue="See more" />
             <CardBox buttonValue="See more" />

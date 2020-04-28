@@ -1,0 +1,62 @@
+/* :root {
+  --main-bg-color: rgb(230, 230, 230);
+  --color-brighter: rgba(119, 79, 56, 0.7);
+  --color-darker: rgba(38, 0, 0, 0.9);
+} */
+
+.OuterBox {
+  height: 50%;
+}
+
+.OuterBoxTop {
+  width: 80vw;
+  height: 40vw;
+  max-height: 225px;
+  max-width: 450px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.OuterBoxTopImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+
+.OuterBoxTitle {
+  font-family: "Rajdhani", sans-serif;
+  color: var(--color-main);
+  margin: 2rem 0 0 3rem;
+  font-size: 2.8rem;
+}
+
+.BottomBox {
+}
+
+.BottomBoxTitle {
+  font-family: "Rajdhani", sans-serif;
+  color: white;
+  text-align: center;
+  margin-left: 1rem;
+}
+
+.ColorBottom {
+  background-color: var(--color-main);
+  height: 40vw;
+  max-height: 225px;
+  display: flex;
+
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  color: white;
+}
+
+.title {
+  color: var(--color-main);
+  padding: 2rem;
+  margin: 1rem;
+  font-size: 3rem;
+}
