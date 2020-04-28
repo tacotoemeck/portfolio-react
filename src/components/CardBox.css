@@ -1,0 +1,80 @@
+.CardBox {
+  width: 80vw;
+  height: 80vw;
+  max-height: 450px;
+  max-width: 450px;
+  border-radius: 2rem;
+  background-color: white;
+  margin: 1rem;
+  position: relative;
+}
+
+.InnerCardBox {
+  height: 90%;
+}
+
+.CarBoxExpandButton {
+  bottom: 0;
+  right: 0;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 95%;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.CarBoxExpandButton__arrow {
+  color: var(--color-main);
+  height: 1rem;
+}
+
+.CarBoxExpandButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.CarBoxExpandButton:hover .CarBoxExpandButton__arrow {
+  animation: moveArrow 1s infinite;
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0%);
+  }
+  12.5% {
+    transform: translateX(25%);
+  }
+  25% {
+    transform: translateX(50%);
+  }
+  37.5% {
+    transform: translateX(75%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  62.5% {
+    transform: translateX(75%);
+  }
+  75% {
+    transform: translateX(50%);
+  }
+  87.5% {
+    transform: translateX(25%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

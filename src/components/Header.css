@@ -1,0 +1,102 @@
+.Header {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 90%;
+  /* height: 15vh; */
+  margin-top: 8vh;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Fjalla One", sans-serif;
+}
+
+.Header__personalInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.Header__personalInfo__img {
+  height: 14vh;
+  width: 14vh;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.Header__personalInfo__details {
+}
+
+.Header__personalInfo__details__name {
+  font-size: 1.7rem;
+  margin-bottom: 0;
+}
+
+.Header__personalInfo__details__title {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.header__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 320px) {
+}
+@media (min-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .Header__personalInfo__img {
+    height: 15vh;
+    width: 15vh;
+  }
+
+  .Header__personalInfo {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .Header__personalInfo {
+    display: flex;
+    flex-direction: row;
+
+    height: 100%;
+  }
+
+  .Header__personalInfo__details {
+    margin-left: 3rem;
+  }
+
+  .Header__personalInfo__details__name {
+    font-size: 1.9rem;
+  }
+
+  .Header__personalInfo__details__title {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+}
+@media (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+}
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .mainBody {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: start;
+    justify-content: center;
+  }
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+}
