@@ -19,6 +19,7 @@ function CardBox(props) {
 
   function addHoverEffectToArrow() {
     // add a moving arrow effect on mouseover
+    // check if CarBoxExpandButtonHoverEffect hasn't already been added
     if (buttonArrowStateStyle.split(" ").length === 1) {
       setbuttonArrowStateStyle(
         buttonArrowStateStyle + " CarBoxExpandButtonHoverEffect"
@@ -67,7 +68,11 @@ function CardBox(props) {
           />
         )}
       </div>
-      <button onClick={handleClick} className="CarBoxExpandButton">
+      <button
+        onClick={handleClick}
+        className="CarBoxExpandButton"
+        style={{ color: backgroundColors[props.bottomBackground] }}
+      >
         {props.buttonValue}
         <RightIcon
           className={buttonArrowStateStyle}
