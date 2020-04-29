@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import InnerBox from "./InnerBox";
 import OuterBox from "./OuterBox";
 import "./CardBox.css";
+import RightIcon from "../img/right";
 
 function CardBox(props) {
   const [open, setOpen] = useState(false);
@@ -9,11 +10,20 @@ function CardBox(props) {
     "CarBoxExpandButton__arrow"
   );
 
+  // background colors
+
+  const backgroundColors = {
+    white: "rgb(119, 79, 56)", // brown color for white backgrounds
+    brown: "rgb(255, 255, 255)", // white color for white backgrounds
+  };
+
   function addHoverEffectToArrow() {
     // add a moving arrow effect on mouseover
-    setbuttonArrowStateStyle(
-      buttonArrowStateStyle + " CarBoxExpandButtonHoverEffect"
-    );
+    if (buttonArrowStateStyle.split(" ").length === 1) {
+      setbuttonArrowStateStyle(
+        buttonArrowStateStyle + " CarBoxExpandButtonHoverEffect"
+      );
+    }
   }
 
   function removeHoverEffectFromArrow() {
@@ -58,12 +68,10 @@ function CardBox(props) {
         )}
       </div>
       <button onClick={handleClick} className="CarBoxExpandButton">
-        {props.buttonValue}{" "}
-        <img
+        {props.buttonValue}
+        <RightIcon
           className={buttonArrowStateStyle}
-          src={require("../img/right.svg")}
-          alt="additional content"
-          aria-expanded={open}
+          backgroundColor={backgroundColors[props.bottomBackground]}
         />
       </button>
     </div>

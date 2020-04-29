@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./InnerBox.css";
 
-function InnerBox(props) {
+function InnerBox() {
   const [BoxClass, setBoxClass] = useState("InnerBox");
 
   useEffect(() => {

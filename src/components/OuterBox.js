@@ -23,8 +23,14 @@ function OuterBox(props) {
   }
 
   if (props.icons) {
-    content.iconsDiv = <div className="SVG">{props.icons}</div>;
-    // content.iconsDiv = { props.icons };
+    // content.iconsDiv = <div className="SVG">{props.icons}</div>;
+    content.iconsDiv = (
+      <div className="OutherBoxSVGdiv">
+        {props.icons.map((icon) => (
+          <div className="SVG">{icon}</div>
+        ))}
+      </div>
+    );
   }
 
   return (

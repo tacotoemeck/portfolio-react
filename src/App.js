@@ -3,6 +3,9 @@ import Header from "./components/Header";
 import CardBox from "./components/CardBox";
 import "./App.css";
 import JavaScriptIcon from "./img/javascript";
+import ReactIcon from "./img/react";
+import PostgreSQLIcon from "./img/postgresql";
+import NodeIcon from "./img/nodejs-2";
 
 const colors = {
   main: "rgb(119, 79, 56)",
@@ -31,13 +34,16 @@ function App() {
             />
             <CardBox
               buttonValue="See more"
-              icons={
+              icons={[
                 <JavaScriptIcon
                   className="CardBoxSVGStack"
                   mainColor={colors.white}
                   secondayColor={colors.main}
-                />
-              }
+                />,
+                <ReactIcon mainColor={colors.main} />,
+                <PostgreSQLIcon mainColor={colors.main} />,
+                <NodeIcon mainColor={colors.main} />,
+              ]}
               subtitle="Developer Profile"
               subtitleClass=""
               bottomBackground="brown"
