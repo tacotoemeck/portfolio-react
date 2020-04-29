@@ -5,19 +5,44 @@ import "./CardBox.css";
 
 function CardBox(props) {
   const [open, setOpen] = useState(false);
+  const [buttonArrowStateStyle, setbuttonArrowStateStyle] = useState(
+    "CarBoxExpandButton__arrow"
+  );
+
+  function addHoverEffectToArrow() {
+    // add a moving arrow effect on mouseover
+    setbuttonArrowStateStyle(
+      buttonArrowStateStyle + " CarBoxExpandButtonHoverEffect"
+    );
+  }
+
+  function removeHoverEffectFromArrow() {
+    // remove moving arrow effect
+    setbuttonArrowStateStyle("CarBoxExpandButton__arrow");
+  }
 
   function handleClick() {
     if (open) {
       setOpen(false);
-      console.log("set to false");
     } else {
       setOpen(true);
-      console.log("set to true");
     }
   }
 
   return (
-    <div className="CardBox">
+    <div
+      className="CardBox"
+      onMouseDown={() => {
+        handleClick();
+      }}
+      onMouseOver={() => {
+        addHoverEffectToArrow();
+      }}
+      onMouseLeave={() => {
+        open && setOpen(false);
+        removeHoverEffectFromArrow();
+      }}
+    >
       <div className="InnerCardBox">
         {open ? (
           <InnerBox />
@@ -27,6 +52,7 @@ function CardBox(props) {
             subtitle={props.subtitle}
             subtitleClass={props.subtitleClass}
             title={props.title}
+            icons={props.icons}
             bottomBackground={props.bottomBackground}
           />
         )}
@@ -34,7 +60,7 @@ function CardBox(props) {
       <button onClick={handleClick} className="CarBoxExpandButton">
         {props.buttonValue}{" "}
         <img
-          className="CarBoxExpandButton__arrow"
+          className={buttonArrowStateStyle}
           src={require("../img/right.svg")}
           alt="additional content"
           aria-expanded={open}

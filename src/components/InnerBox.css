@@ -1,0 +1,37 @@
+.InnerBox {
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -ms-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+  position: relative;
+  height: 90%;
+}
+
+.InnerBoxContent {
+  position: absolute;
+  color: black;
+  margin-top: 6%;
+  margin-bottom: 6rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  height: 100%;
+  overflow: auto;
+}
+
+.transition {
+  opacity: 1;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 5px;
+}

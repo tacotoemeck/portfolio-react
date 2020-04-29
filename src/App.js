@@ -2,6 +2,12 @@ import React from "react";
 import Header from "./components/Header";
 import CardBox from "./components/CardBox";
 import "./App.css";
+import JavaScriptIcon from "./img/javascript";
+
+const colors = {
+  main: "rgb(119, 79, 56)",
+  white: "rgb(255,255,255)",
+};
 
 function App() {
   return (
@@ -25,8 +31,14 @@ function App() {
             />
             <CardBox
               buttonValue="See more"
-              title="Developer Profile"
-              subtitle="📍 London, UK"
+              icons={
+                <JavaScriptIcon
+                  className="CardBoxSVGStack"
+                  mainColor={colors.white}
+                  secondayColor={colors.main}
+                />
+              }
+              subtitle="Developer Profile"
               subtitleClass=""
               bottomBackground="brown"
             />

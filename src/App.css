@@ -81,6 +81,14 @@ body {
   padding-top: 2rem;
 }
 
+.CardBoxSVGStack {
+  width: 20%;
+}
+
+/* .SVG {
+  background-color: black;
+} */
+
 @media (min-width: 320px) {
   /* smartphones, iPhone, portrait 480x320 phones */
 }
@@ -102,7 +110,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: start;
+    align-content: flex-start;
     justify-content: center;
   }
 }

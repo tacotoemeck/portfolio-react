@@ -35,17 +35,21 @@
   height: 1rem;
 }
 
-.CarBoxExpandButton::before {
+/* .CarBoxExpandButton::before {
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
+  right: 10px;
   bottom: 0;
   left: 0;
   cursor: pointer;
-}
+} */
 
-.CarBoxExpandButton:hover .CarBoxExpandButton__arrow {
+/* .CarBoxExpandButton:hover .CarBoxExpandButton__arrow {
+  animation: moveArrow 1s infinite;
+} */
+
+.CarBoxExpandButtonHoverEffect {
   animation: moveArrow 1s infinite;
 }
 
@@ -77,4 +81,27 @@
   100% {
     transform: translateX(0%);
   }
+}
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-exit {
+  opacity: 1;
+}
+
+.example-exit.example-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.SVG {
+  width: 5rem;
+  flex-grow: 1;
 }

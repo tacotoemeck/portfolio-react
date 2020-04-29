@@ -2,29 +2,36 @@ import React from "react";
 import "./OuterBox.css";
 
 function OuterBox(props) {
-  let topDisplay;
-  let image;
-  let titleText;
+  let content = {
+    image: undefined,
+    titleText: undefined,
+    iconsDiv: undefined,
+  };
 
   if (props.image) {
-    image = (
+    content.image = (
       <img
         src={props.image}
         alt={props.imageAlt}
         className="OuterBoxTopImage"
       />
     );
-    topDisplay = "image";
   }
+
   if (props.title) {
-    titleText = <h2 className="OuterBoxTitle">{props.title}</h2>;
-    topDisplay = "text";
+    content.titleText = <h2 className="OuterBoxTitle">{props.title}</h2>;
+  }
+
+  if (props.icons) {
+    content.iconsDiv = <div className="SVG">{props.icons}</div>;
+    // content.iconsDiv = { props.icons };
   }
 
   return (
     <div className="OuterBox">
       <div className="OuterBoxTop">
-        {topDisplay === "image" ? image : titleText}
+        {content.image || content.titleText || content.iconsDiv}
+        {/* {topDisplay === "image" ? image : titleText} */}
       </div>
       <div
         className={
