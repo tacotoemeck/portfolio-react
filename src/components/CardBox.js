@@ -56,7 +56,10 @@ function CardBox(props) {
     >
       <div className="InnerCardBox">
         {open ? (
-          <InnerBox />
+          <InnerBox
+            innerBoxContent={props.innerBoxContent}
+            bottomBackground={props.bottomBackground}
+          />
         ) : (
           <OuterBox
             image={props.image}

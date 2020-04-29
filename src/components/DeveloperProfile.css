@@ -1,0 +1,12 @@
+.DeveloperProfile {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: var(--color-main);
+}
+
+.DeveloperProfile__title {
+  text-align: center;
+  background-color: var(--color-main);
+  color: white;
+  text-transform: uppercase;
+  font-family: "Fjalla One", sans-serif;
+}

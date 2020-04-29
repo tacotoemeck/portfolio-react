@@ -8,6 +8,12 @@ function OuterBox(props) {
     iconsDiv: undefined,
   };
 
+  // add class depending on a color background
+  const backgroundColorClass = {
+    white: "BottomBox",
+    brown: "BottomBox ColorBottom",
+  };
+
   if (props.image) {
     content.image = (
       <img
@@ -39,11 +45,7 @@ function OuterBox(props) {
         {content.image || content.titleText || content.iconsDiv}
         {/* {topDisplay === "image" ? image : titleText} */}
       </div>
-      <div
-        className={
-          props.bottomBackground ? "BottomBox ColorBottom" : "BottomBox"
-        }
-      >
+      <div className={backgroundColorClass[props.bottomBackground]}>
         <h2 className={props.subtitleClass + " BottomBoxTitle"}>
           {props.subtitle}
         </h2>
