@@ -9,9 +9,14 @@ import ReactIcon from "./img/react";
 import PostgreSQLIcon from "./img/postgresql";
 import NodeIcon from "./img/nodejs-2";
 import SchoolIcon from "./img/school";
+import HireMe from "./img/work";
+import WorkPerson from "./img/workperson";
 
 // Content of Cards ( inner )
 import DeveloperProfile from "./components/DeveloperProfile";
+import Education from "./components/Education";
+import HireMeComponent from "./components/HireMe";
+import WorkExperience from "./components/WorkExperience";
 
 const colors = {
   main: "rgb(119, 79, 56)",
@@ -54,7 +59,7 @@ function App() {
               ]}
               subtitle="Developer Profile"
               subtitleClass=""
-              bottomBackground="brown"
+              bottomBackground="white"
               innerBoxContent={<DeveloperProfile />}
             />
             <CardBox
@@ -63,10 +68,27 @@ function App() {
               subtitle="Education & Courses"
               bottomBackground="white"
               icons={[<SchoolIcon />]}
+              innerBoxContent={<Education />}
             />
-            <CardBox buttonValue="See more" />
-            <CardBox buttonValue="See more" />
-            <CardBox buttonValue="See more" />
+            <CardBox
+              buttonValue="What am I looking for?"
+              icons={[<HireMe color={colors.main} />]}
+              subtitle="Hire Me"
+              bottomBackground="brown"
+              innerBoxContent={<HireMeComponent />}
+            />
+            <CardBox
+              buttonValue="See my experience"
+              topBackground="brown"
+              bottomBackground="white"
+              subtitle="Work Experience"
+              icons={[<WorkPerson color={colors.white} />]}
+              innerBoxContent={<WorkExperience />}
+            />
+            <CardBox
+              buttonValue="See more"
+              image="https://1.bp.blogspot.com/-JzExm5L22Zs/UVoxh6DfnrI/AAAAAAAAJCk/s12a2imZIu4/s1600/chef+chop+wide.gif"
+            />
             <CardBox buttonValue="See more" />
             <CardBox buttonValue="See more" />
             <CardBox buttonValue="See more" />

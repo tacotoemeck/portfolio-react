@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./DeveloperProfile.css";
+import "./TextComponents.css";
 
 function DeveloperProfile(props) {
   const [titleTransitionClass, setTitleTransitionClass] = useState(
@@ -44,7 +44,7 @@ function DeveloperProfile(props) {
         <p className="InnerBox__TextContent__paragraph">
           <b>TECH:</b>
           <br></br>
-          git, agile, data structures and alghoritms;
+          git, agile, data structures and algorithms;
           <br></br>
           <b>OTHER:</b>
           <br></br>
