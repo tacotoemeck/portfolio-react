@@ -10,8 +10,8 @@ function OuterBox(props) {
 
   // add class depending on a color background
   const backgroundColorClass = {
-    white: "BottomBox",
-    brown: "BottomBox ColorBottom",
+    white: "",
+    brown: " BoxColoredBackground",
   };
 
   if (props.image) {
@@ -30,7 +30,7 @@ function OuterBox(props) {
 
   if (props.icons) {
     content.iconsDiv = (
-      <div className="OutherBoxSVGdiv">
+      <div className="OuterBoxSVGdiv">
         {props.icons.map((icon) => (
           <div className="SVG">{icon}</div>
         ))}
@@ -40,13 +40,15 @@ function OuterBox(props) {
 
   return (
     <div className="OuterBox">
-      <div className="OuterBoxTop">
+      <div
+        className={"OuterBoxTop " + backgroundColorClass[props.topBackground]}
+      >
         {content.image || content.titleText || content.iconsDiv}
       </div>
-      <div className={backgroundColorClass[props.bottomBackground]}>
-        <h2 className={props.subtitleClass + " BottomBoxTitle"}>
-          {props.subtitle}
-        </h2>
+      <div
+        className={"BottomBox" + backgroundColorClass[props.bottomBackground]}
+      >
+        <h2 className="BottomBoxTitle">{props.subtitle}</h2>
       </div>
     </div>
   );

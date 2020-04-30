@@ -8,11 +8,6 @@
   transition: opacity 1s ease-in;
 }
 
-.transitionOuter {
-  background-color: blue;
-
-  opacity: 0;
-}
 .OuterBoxTop {
   width: 80vw;
   height: 40vw;
@@ -21,6 +16,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
 }
 
 .OuterBoxTopImage {
@@ -38,22 +35,49 @@
   font-size: 2.8rem;
 }
 
-.BottomBoxTitle {
-  font-family: "Rajdhani", sans-serif;
-  color: white;
-  text-align: center;
-  margin-left: 1rem;
-  font-size: 1rem;
+.OuterBoxSVGdiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  width: 100%;
 }
 
-.ColorBottom {
-  background-color: var(--color-main);
+.SVG {
+  max-width: 9rem;
+  max-height: 7rem;
+  display: flex;
+  margin: 0.5rem;
+}
+
+.SVG > * {
+  width: 100%;
+  height: 100%;
+}
+
+.BottomBox {
+  color: var(--color-main);
   height: 40vw;
   max-height: 225px;
   display: flex;
-
+  justify-content: flex-end;
   border-bottom-right-radius: 2rem;
   border-bottom-left-radius: 2rem;
+}
+
+.BottomBoxTitle {
+  font-family: "Rajdhani", sans-serif;
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 2rem;
+  font-size: 1rem;
+  width: 50%;
+  text-align: right;
+}
+
+.BoxColoredBackground {
+  background-color: var(--color-main);
   color: white;
 }
 

@@ -2,10 +2,13 @@ import React from "react";
 import Header from "./components/Header";
 import CardBox from "./components/CardBox";
 import "./App.css";
+
+// import SVG icon components
 import JavaScriptIcon from "./img/javascript";
 import ReactIcon from "./img/react";
 import PostgreSQLIcon from "./img/postgresql";
 import NodeIcon from "./img/nodejs-2";
+import SchoolIcon from "./img/school";
 
 // Content of Cards ( inner )
 import DeveloperProfile from "./components/DeveloperProfile";
@@ -33,12 +36,12 @@ function App() {
               buttonValue="See more "
               image="https://images.unsplash.com/photo-1471115853179-bb1d604434e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
               subtitle="About Me" // bottom part title
-              subtitleClass="title" // if bottom title is the "only" title - add title class
+              // subtitleClass="title" // if bottom title is the "only" title - add title class
               bottomBackground="white" // sets the background of the bottom part of the Outer Container
-              innerBoxContent={<DeveloperProfile />} // pass on a component to be monted in the Inner Container Box
+              innerBoxContent={""} // pass on a component to be monted in the Inner Container Box
             />
             <CardBox
-              buttonValue="See more"
+              buttonValue="more skills"
               icons={[
                 <JavaScriptIcon
                   className="CardBoxSVGStack"
@@ -54,7 +57,13 @@ function App() {
               bottomBackground="brown"
               innerBoxContent={<DeveloperProfile />}
             />
-            <CardBox buttonValue="See more" />
+            <CardBox
+              buttonValue="more education"
+              topBackground="brown"
+              subtitle="Education & Courses"
+              bottomBackground="white"
+              icons={[<SchoolIcon />]}
+            />
             <CardBox buttonValue="See more" />
             <CardBox buttonValue="See more" />
             <CardBox buttonValue="See more" />

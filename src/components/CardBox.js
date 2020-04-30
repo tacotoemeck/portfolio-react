@@ -53,10 +53,10 @@ function CardBox(props) {
         open && setOpen(false);
         removeHoverEffectFromArrow();
       }}
-      onTouchEnd={() => {
-        open && setOpen(false);
-        removeHoverEffectFromArrow();
-      }}
+      // onTouchCancel={() => {
+      //   open && setOpen(false);
+      //   removeHoverEffectFromArrow();
+      // }}
     >
       <div className="InnerCardBox">
         {open ? (
@@ -72,6 +72,7 @@ function CardBox(props) {
             title={props.title}
             icons={props.icons}
             bottomBackground={props.bottomBackground}
+            topBackground={props.topBackground}
           />
         )}
       </div>
