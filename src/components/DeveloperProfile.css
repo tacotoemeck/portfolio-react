@@ -1,0 +1,55 @@
+.DeveloperProfile {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: var(--color-main);
+  padding: 1rem;
+  position: relative;
+}
+
+.DeveloperProfile__title {
+  text-align: center;
+  background-color: var(--color-main);
+  color: white;
+  text-transform: uppercase;
+}
+
+.InnerCard_title {
+  position: absolute;
+  font-family: "Fjalla One", sans-serif;
+  top: -5rem;
+  -webkit-transition: top 0.4s ease-in;
+  -moz-transition: top 0.4s ease-in;
+  -ms-transition: top 0.4s ease-in;
+  -o-transition: top 0.4s ease-in;
+  transition: top 0.4s ease-in;
+
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.InnerBox__titleEmoji {
+  margin-left: 1rem;
+}
+
+.titleTransitionClass {
+  top: -2rem;
+}
+
+.InnerBox__TextContent {
+  padding: 1.8rem;
+  margin-top: 1rem;
+}
+
+.InnerBox__TextContent__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.InnerBox__TextContent__paragraph {
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 1.5rem;
+  letter-spacing: 0.1rem;
+}

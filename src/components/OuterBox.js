@@ -2,35 +2,48 @@ import React from "react";
 import "./OuterBox.css";
 
 function OuterBox(props) {
-  let topDisplay;
-  let image;
-  let titleText;
+  let content = {
+    image: undefined,
+    titleText: undefined,
+    iconsDiv: undefined,
+  };
+
+  // add class depending on a color background
+  const backgroundColorClass = {
+    white: "BottomBox",
+    brown: "BottomBox ColorBottom",
+  };
 
   if (props.image) {
-    image = (
+    content.image = (
       <img
         src={props.image}
         alt={props.imageAlt}
         className="OuterBoxTopImage"
       />
     );
-    topDisplay = "image";
   }
+
   if (props.title) {
-    titleText = <h2 className="OuterBoxTitle">{props.title}</h2>;
-    topDisplay = "text";
+    content.titleText = <h2 className="OuterBoxTitle">{props.title}</h2>;
+  }
+
+  if (props.icons) {
+    content.iconsDiv = (
+      <div className="OutherBoxSVGdiv">
+        {props.icons.map((icon) => (
+          <div className="SVG">{icon}</div>
+        ))}
+      </div>
+    );
   }
 
   return (
     <div className="OuterBox">
       <div className="OuterBoxTop">
-        {topDisplay === "image" ? image : titleText}
+        {content.image || content.titleText || content.iconsDiv}
       </div>
-      <div
-        className={
-          props.bottomBackground ? "BottomBox ColorBottom" : "BottomBox"
-        }
-      >
+      <div className={backgroundColorClass[props.bottomBackground]}>
         <h2 className={props.subtitleClass + " BottomBoxTitle"}>
           {props.subtitle}
         </h2>

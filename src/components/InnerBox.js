@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./InnerBox.css";
 
 function InnerBox(props) {
+  const [BoxClass, setBoxClass] = useState("InnerBox");
+
+  useEffect(() => {
+    setTimeout(() => {
+      setBoxClass(BoxClass + " transitionInner");
+    }, 50);
+  }, []);
+
   return (
-    <div className="InnerBox">
-      <h1>Inner</h1>
+    <div className={BoxClass}>
+      <div className="InnerBoxContent">{props.innerBoxContent}</div>
     </div>
   );
 }
