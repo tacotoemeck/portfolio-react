@@ -8,6 +8,7 @@
   margin: 1rem;
   position: relative;
   cursor: pointer;
+  z-index: 1;
 }
 
 .InnerCardBox {

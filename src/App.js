@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import CardBox from "./components/CardBox";
+import CardBoxSlider from "./components/CardBoxSlider";
 import "./App.css";
 
 // import SVG icon components
@@ -85,10 +86,7 @@ function App() {
               icons={[<WorkPerson color={colors.white} />]}
               innerBoxContent={<WorkExperience />}
             />
-            <CardBox
-              buttonValue="See more"
-              image="https://1.bp.blogspot.com/-JzExm5L22Zs/UVoxh6DfnrI/AAAAAAAAJCk/s12a2imZIu4/s1600/chef+chop+wide.gif"
-            />
+            <CardBoxSlider />
             <CardBox buttonValue="See more" />
             <CardBox buttonValue="See more" />
             <CardBox buttonValue="See more" />
