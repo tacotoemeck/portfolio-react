@@ -25,6 +25,7 @@
   display: flex;
   justify-content: space-between;
   width: 90%;
+  font-size: 1.8rem;
 }
 
 .InnerBox__titleEmoji {
@@ -32,24 +33,65 @@
 }
 
 .titleTransitionClass {
-  top: -2rem;
+  top: -1.2rem;
 }
 
 .InnerBox__TextContent {
-  padding: 1.8rem;
+  padding: 0.2rem;
   margin-top: 1rem;
 }
 
 .InnerBox__TextContent__title {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 0;
 }
 
 .InnerBox__TextContent__paragraph {
-  font-size: 1rem;
+  font-size: 0.9rem;
+
+  letter-spacing: 0.05rem;
+}
+
+.justifySpan {
   text-align: justify;
-  line-height: 1.5rem;
-  letter-spacing: 0.1rem;
+}
+
+@media (min-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+}
+@media (min-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+}
+@media (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .InnerBox__TextContent {
+    padding: 1.4rem;
+    margin-top: 1rem;
+  }
+  .InnerCard_title {
+    font-size: 2.2rem;
+  }
+  .titleTransitionClass {
+    top: -2rem;
+  }
+  .InnerBox__TextContent__title {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .InnerBox__TextContent__paragraph {
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.4rem;
+    letter-spacing: 0.05rem;
+  }
+}
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
 }

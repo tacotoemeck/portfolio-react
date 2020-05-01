@@ -53,18 +53,18 @@ function DeveloperProfile(props) {
           <br></br>
         </p>
         <h3 className="InnerBox__TextContent__title">Summary</h3>
-        <p className="InnerBox__TextContent__paragraph">
+        <p className="InnerBox__TextContent__paragraph justifySpan">
           I started developing websites back in highschool but haven't pursed it
           as a career until 2019 when I started freelancing. I dedicated myself
           to a full-time study, focusing on lastest technologies as well as
           workplace preperation (agile, git, team projects).
         </p>
-        <p className="InnerBox__TextContent__paragraph">
+        <p className="InnerBox__TextContent__paragraph justifySpan">
           In June 2020, I have graduated from Founders and Coders, prominent
           full-stack London bootcamp. immediately after the course, I begun
           working on Tech for Better projects.
         </p>
-        <p className="InnerBox__TextContent__paragraph">
+        <p className="InnerBox__TextContent__paragraph justifySpan">
           I am an active member of number of front-end focused London meetup
           groups, active within Twitter tech community and mentor to beginner
           developers.

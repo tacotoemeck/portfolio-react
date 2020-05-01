@@ -29,6 +29,7 @@
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
   /* border-radius: 2rem; */
+  filter: sepia(2);
 }
 
 .OuterBoxTitle {
