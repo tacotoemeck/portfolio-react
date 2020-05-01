@@ -18,6 +18,7 @@ import DeveloperProfile from "./components/DeveloperProfile";
 import Education from "./components/Education";
 import HireMeComponent from "./components/HireMe";
 import WorkExperience from "./components/WorkExperience";
+import Projects from "./components/Projects";
 
 const colors = {
   main: "rgb(119, 79, 56)",
@@ -87,7 +88,14 @@ function App() {
               innerBoxContent={<WorkExperience />}
             />
             <CardBoxSlider />
-            <CardBox buttonValue="See more" />
+            <CardBox
+              buttonValue="More projects"
+              title="Projects"
+              image={require("./img/tools.jpeg")}
+              bottomBackground="brown"
+              subtitle="Projects"
+              innerBoxContent={<Projects />}
+            />
             <CardBox buttonValue="See more" />
             <CardBox buttonValue="See more" />
           </main>
