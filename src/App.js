@@ -39,7 +39,7 @@ function App() {
           <main className="mainBody">
             <CardBox
               buttonValue="See more "
-              image="https://images.unsplash.com/photo-1471115853179-bb1d604434e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+              image={require("./img/me.jpg")}
               subtitle="About Me" // bottom part title
               // subtitleClass="title" // if bottom title is the "only" title - add title class
               bottomBackground="white" // sets the background of the bottom part of the Outer Container
@@ -93,7 +93,7 @@ function App() {
             <CardBox buttonValue="See more" />
             <CardBox buttonValue="See more" />
           </main>
-          <footer className="footer"></footer>
+          <footer className="footer">DUPA</footer>
         </div>
       </div>
       <div className="regular-wrapper"></div>
