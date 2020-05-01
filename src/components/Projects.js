@@ -31,7 +31,7 @@ function Projects(props) {
           <GithubIcon
             mainColor="rgb(119, 79, 56)"
             className="projectSVGIcons"
-          />{" "}
+          />
           View on github
         </a>
         <h3 className="InnerBox__TextContent__title">Founders and Coders</h3>

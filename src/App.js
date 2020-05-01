@@ -40,14 +40,6 @@ function App() {
           </header>
           <main className="mainBody">
             <CardBox
-              buttonValue="See more "
-              image={require("./img/me.jpg")}
-              subtitle="About Me" // bottom part title
-              // subtitleClass="title" // if bottom title is the "only" title - add title class
-              bottomBackground="white" // sets the background of the bottom part of the Outer Container
-              innerBoxContent={""} // pass on a component to be monted in the Inner Container Box
-            />
-            <CardBox
               buttonValue="more skills"
               icons={[
                 <JavaScriptIcon
@@ -63,6 +55,14 @@ function App() {
               subtitleClass=""
               bottomBackground="white"
               innerBoxContent={<DeveloperProfile />}
+            />
+            <CardBox
+              buttonValue="More projects"
+              title="Projects"
+              image={require("./img/tools.jpeg")}
+              bottomBackground="brown"
+              subtitle="Projects"
+              innerBoxContent={<Projects />}
             />
             <CardBox
               buttonValue="more education"
@@ -88,13 +88,14 @@ function App() {
               innerBoxContent={<WorkExperience />}
             />
             <CardBoxSlider />
+
             <CardBox
-              buttonValue="More projects"
-              title="Projects"
-              image={require("./img/tools.jpeg")}
-              bottomBackground="brown"
-              subtitle="Projects"
-              innerBoxContent={<Projects />}
+              buttonValue="See more "
+              image={require("./img/me.jpg")}
+              subtitle="About Me" // bottom part title
+              // subtitleClass="title" // if bottom title is the "only" title - add title class
+              bottomBackground="white" // sets the background of the bottom part of the Outer Container
+              innerBoxContent={""} // pass on a component to be monted in the Inner Container Box
             />
             <CardBox buttonValue="See more" />
             <CardBox buttonValue="See more" />
