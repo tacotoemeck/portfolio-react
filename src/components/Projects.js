@@ -23,95 +23,103 @@ function Projects(props) {
           <b>Python, Flask, VueJS, PostgreSQL</b>
           <br></br>
           <br></br>
-          Hobby projects built among a team of 4. Based on a popular board/card
+          Hobby projects currently being built among a team of 4 developers. Based on a popular board/card
           game. Uses Flask API with VueJS Frontend. I am mainly responsible for
-          delivery of the UI but also involved with all other apsects.
+          delivery of the UI but also involved with other apsects.
         </p>
-        <a href="" className="InnerBox__TextContent__link">
+        <a href="https://github.com/DGHP/CITADEL---VUE" className="InnerBox__TextContent__link">
           <GithubIcon
             mainColor="rgb(119, 79, 56)"
             className="projectSVGIcons"
           />
           View on github
         </a>
-        <h3 className="InnerBox__TextContent__title">Founders and Coders</h3>
-        <p className="InnerBox__TextContent__paragraph">
-          <b>
-            <b>Developer Student</b>
-            <br></br>
-            May '20 - Present
-            <span
-              className="InnerBox__titleEmoji"
-              role="img"
-              aria-label="Round Pushpin emoji"
-            >
-              📍
-            </span>
-            London
-          </b>
+        <h3 className="InnerBox__TextContent__title">iVe Stock</h3>
+        <p className="InnerBox__TextContent__paragraph justifySpan">
+          <b>NodeJs, Express, JavaScript, MongoDB</b>
           <br></br>
-          Member, graduate and mentor. Develped number of applications and other
-          learning tools.
+          <br></br>
+          Application built with aim to help small food business controling their daily stock levels, sales and wastage. It uses passport user validation, MongoDB with mongoose and Express with 'ejs'.
         </p>
-        <h3 className="InnerBox__TextContent__title">Freelance</h3>
-        <p className="InnerBox__TextContent__paragraph">
-          <b>Web Developer</b>
+        <a href="https://github.com/tacotoemeck/iVeStock" className="InnerBox__TextContent__link">
+          <GithubIcon
+            mainColor="rgb(119, 79, 56)"
+            className="projectSVGIcons"
+          />
+          View on github
+        </a>
+        <h3 className="InnerBox__TextContent__title">Color Picker React</h3>
+        <p className="InnerBox__TextContent__paragraph justifySpan">
+          <b>React, JavaScript</b>
           <br></br>
-          <b>
-            May '19 - Present
-            <span
-              className="InnerBox__titleEmoji"
-              role="img"
-              aria-label="Round Pushpin emoji"
-            >
-              📍
-            </span>
-            London
-          </b>
           <br></br>
-          Full time project based study of Frontend Web technologies. Small paid
-          and unpaid gigs invloving simple Wordpress sites, assitance and
-          passion projects.
+          Application to create custom color pallets. Pallets can be stored, colors rearranged ( using draggable components ), saved and copied into a clipboard using various color formats. It uses MaterialUI and other component libraries.  
         </p>
-        <h3 className="InnerBox__TextContent__title">Maria Sabina</h3>
-        <p className="InnerBox__TextContent__paragraph">
-          <b>Founder</b>
+        <a href="https://github.com/tacotoemeck/react_color_picker" className="InnerBox__TextContent__link">
+          <GithubIcon
+            mainColor="rgb(119, 79, 56)"
+            className="projectSVGIcons"
+          />
+          View on github
+        </a>
+        <h3 className="InnerBox__TextContent__title">Formula Calculator</h3>
+        <p className="InnerBox__TextContent__paragraph justifySpan">
+          <b>Vanilla JavaScript</b>
           <br></br>
-          <b>
-            May '15 - June '19
-            <span
-              className="InnerBox__titleEmoji"
-              role="img"
-              aria-label="Round Pushpin emoji"
-            >
-              📍
-            </span>
-            London
-          </b>
           <br></br>
-          Founder of a street food business and a restaurant in Brixton.
-          Employed up to 12 members of staff and achiieved a turonover of up to
-          £350,000 pa.
+          Fully accessible formula calculator including brackets and powers. Built in vanilla JS. 
         </p>
-        <h3 className="InnerBox__TextContent__title">Sky</h3>
-        <p className="InnerBox__TextContent__paragraph">
-          <b>Recruiter</b>
+        <a href="https://github.com/tacotoemeck/FaC-Calculator" className="InnerBox__TextContent__link">
+          <GithubIcon
+            mainColor="rgb(119, 79, 56)"
+            className="projectSVGIcons"
+          />
+          View on github
+        </a>
+
+        <h3 className="InnerBox__TextContent__title">FAC19 Project Gallery</h3>
+        <p className="InnerBox__TextContent__paragraph justifySpan">
+          <b>Node, PostgreSQL, JavaScript</b>
           <br></br>
-          <b>
-            Aug '13 - Aug '15
-            <span
-              className="InnerBox__titleEmoji"
-              role="img"
-              aria-label="Round Pushpin emoji"
-            >
-              📍
-            </span>
-            London
-          </b>
           <br></br>
-          Tech recruiter, covered areas of testers, software developers, scrum
-          masters etc.
+          Application to store and display all of the project made by our Founders and Coders cohort. It uses bcrypt authentication to allow an admin user to add/or delete projects for chosen weeks. Decent custom js form validation and no framework NodeJS server are the highlights.
         </p>
+        <a href="https://github.com/tacotoemeck/project_board_fac19" className="InnerBox__TextContent__link">
+          <GithubIcon
+            mainColor="rgb(119, 79, 56)"
+            className="projectSVGIcons"
+          />
+          View on github
+        </a>
+        
+        <h3 className="InnerBox__TextContent__title">Pomodoro Timer</h3>
+        <p className="InnerBox__TextContent__paragraph justifySpan">
+          <b>Vanilla JavaScript</b>
+          <br></br>
+          <br></br>
+          Fully functional front-end application for Pomodoro technique tracking. Although it was my first application made in early days of my coding journey, it has a decent functionallity, sounds and is proudly made in vanilla JS.
+        </p>
+        <a href="https://github.com/tacotoemeck/Pomodoro-Clock-Beta" className="InnerBox__TextContent__link">
+          <GithubIcon
+            mainColor="rgb(119, 79, 56)"
+            className="projectSVGIcons"
+          />
+          View on github
+        </a>
+        <h3 className="InnerBox__TextContent__title">Various</h3>
+        <p className="InnerBox__TextContent__paragraph justifySpan">
+          <b>JavaScript, HTML, CSS, React</b>
+          <br></br>
+          <br></br>
+            Over the time I have built 100s of practice projects, you can view some of the on my <a href="https://codepen.io/tacotomek"> CodePen profile</a>  or my <a href="">GitHub account</a>.  
+        </p>
+        <a href="https://github.com/tacotoemeck/FaC-Calculator" className="InnerBox__TextContent__link">
+          <GithubIcon
+            mainColor="rgb(119, 79, 56)"
+            className="projectSVGIcons"
+          />
+          View on github
+        </a>
       </div>
     </section>
   );
