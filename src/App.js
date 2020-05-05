@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import CardBox from "./components/CardBox";
 import CardBoxSlider from "./components/CardBoxSlider";
+import FooterComponent from "./components/Footer";
 import "./App.css";
 
 // import SVG icon components
@@ -100,7 +101,9 @@ function App() {
             <CardBox buttonValue="See more" />
             <CardBox buttonValue="See more" />
           </main>
-          <footer className="footer">DUPA</footer>
+          <footer className="footer">
+            <FooterComponent />
+          </footer>
         </div>
       </div>
       <div className="regular-wrapper"></div>

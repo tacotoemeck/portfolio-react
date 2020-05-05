@@ -13,8 +13,14 @@
   text-transform: uppercase;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+  margin-bottom: 2rem;
 }
+
 .InnerBox__TextContent__link svg {
   margin-bottom: -0.1rem;
   margin-right: 0.5rem;
+}
+
+.Projects__hr {
+  margin-top: 1rem;
 }

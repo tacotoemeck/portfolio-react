@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+
 import InnerBox from "./InnerBox";
 import OuterBox from "./OuterBox";
 import "./CardBox.css";
@@ -9,6 +10,13 @@ function CardBox(props) {
   const [buttonArrowStateStyle, setbuttonArrowStateStyle] = useState(
     "CarBoxExpandButton__arrow"
   );
+
+  const ref = useRef();
+
+  useOnClickOutside(ref, () => {
+    removeHoverEffectFromArrow();
+    setOpen(false);
+  });
 
   // background colors
 
@@ -33,15 +41,12 @@ function CardBox(props) {
   }
 
   function handleClick() {
-    if (open) {
-      setOpen(false);
-    } else {
-      setOpen(true);
-    }
+    setOpen(!open);
   }
 
   return (
     <div
+      ref={ref}
       className="CardBox"
       onClick={() => {
         handleClick();
@@ -53,10 +58,16 @@ function CardBox(props) {
         open && setOpen(false);
         removeHoverEffectFromArrow();
       }}
-      // onTouchCancel={() => {
-      //   open && setOpen(false);
-      //   removeHoverEffectFromArrow();
-      // }}
+      OnBlur={() => {
+        open && setOpen(false);
+        removeHoverEffectFromArrow();
+      }}
+      onTouchStart={() => {
+        addHoverEffectToArrow();
+      }}
+      onTouchEnd={() => {
+        removeHoverEffectFromArrow();
+      }}
     >
       <div className="InnerCardBox">
         {open ? (
@@ -78,7 +89,7 @@ function CardBox(props) {
       </div>
       <button
         onClick={handleClick}
-        className="CarBoxExpandButton"
+        className={!open ? "CarBoxExpandButton" : "HideCarBoxExpandButton"}
         style={{ color: backgroundColors[props.bottomBackground] }}
       >
         {props.buttonValue}
@@ -88,6 +99,37 @@ function CardBox(props) {
         />
       </button>
     </div>
+  );
+}
+
+// Hook
+function useOnClickOutside(ref, handler) {
+  useEffect(
+    () => {
+      const listener = (event) => {
+        // Do nothing if clicking ref's element or descendent elements
+        if (!ref.current || ref.current.contains(event.target)) {
+          return;
+        }
+
+        handler(event);
+      };
+
+      document.addEventListener("mousedown", listener);
+      document.addEventListener("touchstart", listener);
+
+      return () => {
+        document.removeEventListener("mousedown", listener);
+        document.removeEventListener("touchstart", listener);
+      };
+    },
+    // Add ref and handler to effect dependencies
+    // It's worth noting that because passed in handler is a new ...
+    // ... function on every render that will cause this effect ...
+    // ... callback/cleanup to run every render. It's not a big deal ...
+    // ... but to optimize you can wrap handler in useCallback before ...
+    // ... passing it into this hook.
+    [ref, handler]
   );
 }
 

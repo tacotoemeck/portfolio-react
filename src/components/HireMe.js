@@ -25,42 +25,15 @@ function HireMeComponent(props) {
         </span>
       </h2>
       <div className="InnerBox__TextContent">
-        <h3 className="InnerBox__TextContent__title">
-          Location
-          <span
-            className="InnerBox__titleEmoji"
-            role="img"
-            aria-label="Round Pushpin emoji"
-          >
-            📍
-          </span>
-        </h3>
+        <h3 className="InnerBox__TextContent__title">Location</h3>
         <p className="InnerBox__TextContent__paragraph">
           London, UK based, but open to relocate or work remote.
         </p>
-        <h3 className="InnerBox__TextContent__title">
-          Salary
-          <span
-            className="InnerBox__titleEmoji"
-            role="img"
-            aria-label="Money bag emoji"
-          >
-            💰
-          </span>
-        </h3>
+        <h3 className="InnerBox__TextContent__title">Salary</h3>
         <p className="InnerBox__TextContent__paragraph">
           For London min £32000 pa
         </p>
-        <h3 className="InnerBox__TextContent__title">
-          Perks
-          <span
-            className="InnerBox__titleEmoji"
-            role="img"
-            aria-label="Park emoji"
-          >
-            🏞️
-          </span>
-        </h3>
+        <h3 className="InnerBox__TextContent__title">Perks</h3>
         <p className="InnerBox__TextContent__paragraph">
           <ul>
             <li>Opportunity to learn</li>

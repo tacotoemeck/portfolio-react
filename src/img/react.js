@@ -8,8 +8,8 @@ function ReactIcon(props) {
 
   return (
     <svg
-      width="250"
-      height="224"
+      width="48"
+      height="48"
       viewBox="0 0 256 230"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMinYMin meet"

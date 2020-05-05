@@ -37,6 +37,10 @@
   height: 1rem;
 }
 
+.HideCarBoxExpandButton {
+  display: none;
+}
+
 .CarBoxExpandButtonHoverEffect {
   animation: moveArrow 1s infinite;
 }
