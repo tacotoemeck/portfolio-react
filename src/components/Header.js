@@ -2,7 +2,7 @@ import React from "react";
 import ButtonLink from "./ButtonLink";
 import "./Header.css";
 
-function Header() {
+function Header({ formDisplay, setFormDisplay }) {
   return (
     <div className="Header">
       <div className="Header__personalInfo">
@@ -21,7 +21,10 @@ function Header() {
       <div className="header__buttons">
         {/* need to create button functionality, it will take a path as prop */}
         {/* will open a pop up contact form with good validation  */}
-        <ButtonLink value="Contact Me" />
+        <ButtonLink
+          value="Contact Me"
+          onClick={() => setFormDisplay(!formDisplay)}
+        />
         {/* will open a pop up window with cv inside  */}
         <ButtonLink value="View CV" />
       </div>

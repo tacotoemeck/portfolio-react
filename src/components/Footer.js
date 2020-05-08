@@ -12,9 +12,24 @@ function FooterComponent(props) {
         Made in: <ReactIcon />
       </div>
       <div className="Footer__linksElement">
-        <TwitterIcon />
-        <LinkedinIcon />
-        <GithubSquareIcon />
+        <a
+          href="https://twitter.com/TomaszWagner1"
+          aria-label="Link to Tom's Twitter page"
+        >
+          <TwitterIcon />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/tomasz-wagner-29126931/"
+          aria-label="Link to Tom's LinkedIn page"
+        >
+          <LinkedinIcon />
+        </a>
+        <a
+          href="https://github.com/tacotoemeck"
+          aria-label="Link to Tom's Github profile page"
+        >
+          <GithubSquareIcon />
+        </a>
       </div>
     </div>
   );

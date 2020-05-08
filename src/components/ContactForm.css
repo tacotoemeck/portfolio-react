@@ -1,0 +1,39 @@
+.ContactForm {
+  /* position: absolute; */
+  /* min-height: 80vh; */
+  background-color: rgba(119, 79, 56, 0.9);
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+
+  border-radius: 2rem;
+}
+
+.ContactForm__InnerContainer {
+  width: 80%;
+  /* margin-top: -30vh; */
+}
+
+.ContactForm__Form {
+  display: flex;
+  flex-direction: column;
+}
+
+.ContactForm__Form > * {
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.ContactForm__Form__button {
+  padding: 0.8rem 1.8rem;
+  margin: 0.7rem 0.9rem;
+  border-radius: 0.4rem;
+  width: 25%;
+  cursor: pointer;
+  color: white;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+}

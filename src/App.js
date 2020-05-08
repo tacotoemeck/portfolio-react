@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
 import CardBox from "./components/CardBox";
 import CardBoxSlider from "./components/CardBoxSlider";
 import FooterComponent from "./components/Footer";
+import ContactForm from "./components/ContactForm";
 import "./App.css";
 
 // import SVG icon components
@@ -27,6 +28,12 @@ const colors = {
 };
 
 function App() {
+  const [formDisplay, setFormDisplay] = useState(false);
+
+  // const showForm = () => {
+  //   setFormDisplay(!formDisplay);
+  // };
+
   return (
     <div>
       <div className="parallax-wrapper">
@@ -37,9 +44,13 @@ function App() {
               src={require("./img/trees.jpeg")}
               alt="background forest"
             />
-            <Header />
+            <Header formDisplay={formDisplay} setFormDisplay={setFormDisplay} />
           </header>
           <main className="mainBody">
+            <div className="ContactFormCotainer">
+              {formDisplay && <ContactForm />}
+            </div>
+
             <CardBox
               buttonValue="more skills"
               icons={[
