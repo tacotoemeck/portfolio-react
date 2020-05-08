@@ -1,8 +1,9 @@
 .ContactForm {
   /* position: absolute; */
   /* min-height: 80vh; */
-  background-color: rgba(119, 79, 56, 0.9);
+  background-color: var(--color-main);
   width: 90vw;
+
   display: flex;
   justify-content: center;
   padding-top: 3rem;
@@ -13,7 +14,13 @@
 
 .ContactForm__InnerContainer {
   width: 80%;
-  /* margin-top: -30vh; */
+  position: relative;
+}
+
+.ContactForm__InnerContainer__closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .ContactForm__Form {
@@ -32,8 +39,11 @@
   border-radius: 0.4rem;
   width: 25%;
   cursor: pointer;
-  color: white;
+  color: var(--color-main);
   font-family: "Rajdhani", sans-serif;
   font-size: 1.2rem;
   font-weight: bold;
+  background-color: var(--main-bg-color);
+  align-self: center;
+  text-transform: uppercase;
 }

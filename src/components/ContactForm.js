@@ -45,17 +45,8 @@ function ContactForm() {
 
   return (
     <section className="ContactForm">
-      {/* <form className="contact-form" onSubmit={sendEmail}>
-        <input type="hidden" name="contact_number" />
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" />
-      </form> */}
       <div className="ContactForm__InnerContainer">
+        <button className="ContactForm__InnerContainer__closeButton">X</button>
         <form className="ContactForm__Form" onSubmit={sendEmail}>
           <h3 className="ContactForm__Form__title">Get in touch!</h3>
           <label forhtml="name">
