@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com";
+import useOnClickOutside from "../utils/helpers";
 import "./ContactForm.css";
 
-function ContactForm() {
+function ContactForm(props) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-  //   const [name, setName] = useState("");
-  //   const [email, setEmail] = useState("");
-  //     const [message, setMessage] = useState("");
+
+  const ref = useRef();
+  console.log(ref);
+  useOnClickOutside(ref, () => {
+    console.log("clicked outside");
+    props.setFormDisplay(false);
+  });
 
   const handleChange = (e) => {
     const newFormData = formData;
@@ -21,12 +26,12 @@ function ContactForm() {
   const service_id = "gmail";
   const template_id = "template_pdwmzpTE";
 
-  const template_params = {
-    reply_to: "reply_to_value",
-    from_name: "user_name",
-    to_name: "to_name_value",
-    message_html: "message_html_value",
-  };
+  // const template_params = {
+  //   reply_to: "reply_to_value",
+  //   from_name: "user_name",
+  //   to_name: "to_name_value",
+  //   message_html: "message_html_value",
+  // };
 
   const user_ID = "user_cSCSfdQ44eWNEToaxQzlC";
 
@@ -44,9 +49,15 @@ function ContactForm() {
   }
 
   return (
-    <section className="ContactForm">
+    <section ref={ref} className="ContactForm">
       <div className="ContactForm__InnerContainer">
-        <button className="ContactForm__InnerContainer__closeButton">X</button>
+        <button
+          className="ContactForm__InnerContainer__closeButton"
+          aria-label="Click to close the form window"
+          onClick={() => props.setFormDisplay(false)}
+        >
+          <span aria-hidden="true"> </span>X
+        </button>
         <form className="ContactForm__Form" onSubmit={sendEmail}>
           <h3 className="ContactForm__Form__title">Get in touch!</h3>
           <label forhtml="name">
@@ -78,6 +89,7 @@ function ContactForm() {
             type="text"
             id="message"
             name="message"
+            rows="5"
             required
             onChange={handleChange}
           />

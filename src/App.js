@@ -48,7 +48,7 @@ function App() {
           </header>
           <main className="mainBody">
             <div className="ContactFormCotainer">
-              {formDisplay && <ContactForm />}
+              {formDisplay && <ContactForm setFormDisplay={setFormDisplay} />}
             </div>
 
             <CardBox
@@ -101,16 +101,16 @@ function App() {
             />
             <CardBoxSlider />
 
-            <CardBox
+            {/* <CardBox
               buttonValue="See more "
               image={require("./img/me.jpg")}
               subtitle="About Me" // bottom part title
               // subtitleClass="title" // if bottom title is the "only" title - add title class
               bottomBackground="white" // sets the background of the bottom part of the Outer Container
               innerBoxContent={""} // pass on a component to be monted in the Inner Container Box
-            />
-            <CardBox buttonValue="See more" />
-            <CardBox buttonValue="See more" />
+            /> */}
+            {/* <CardBox buttonValue="See more" />
+            <CardBox buttonValue="See more" /> */}
           </main>
           <footer className="footer">
             <FooterComponent />

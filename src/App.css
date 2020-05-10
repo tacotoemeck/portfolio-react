@@ -17,6 +17,7 @@ body {
   transform-style: preserve-3d;
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: var(--color-brighter);
 }
 .parallax-wrapper {
   width: 100vw;
@@ -48,7 +49,7 @@ body {
   content: "";
   width: 100vw;
   height: 100%;
-  background-repeat: repeat-y;
+  /* background-repeat: repeat-y; */
   top: 0;
   left: 0;
   position: absolute;
@@ -67,6 +68,7 @@ body {
 .regular-wrapper {
   width: 100vw;
   background-image: url("/trianglify2.png");
+
   z-index: 2;
   /* position: relative; */
 }
@@ -93,8 +95,9 @@ body {
 
 .ContactFormCotainer {
   position: absolute;
-  top: 10vh;
+  top: 0;
   z-index: 10;
+  /* left: 1000px; */
 }
 
 .CardBoxSVGStack {
@@ -112,6 +115,13 @@ body {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
   .parallax-wrapper {
     padding-top: 40vh;
+  }
+  .ContactFormCotainer {
+    top: 10vh;
+    z-index: 10;
+    width: 80vh;
+    left: 20vw;
+    /* left: 10vh; */
   }
 }
 @media (min-width: 641px) {

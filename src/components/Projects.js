@@ -18,7 +18,7 @@ function Projects(props) {
     <section className="DeveloperProfile">
       <h2 className={titleTransitionClass}>Projects</h2>
       <div className="InnerBox__TextContent">
-        <hr className="Projects__hr" />
+        {/* <hr className="Projects__hr" />
         <h3 className="InnerBox__TextContent__title">Citadel</h3>
         <p className="InnerBox__TextContent__paragraph justifySpan">
           <b>Python, Flask, VueJS, PostgreSQL</b>
@@ -38,7 +38,7 @@ function Projects(props) {
             className="projectSVGIcons"
           />
           View on github
-        </a>
+        </a> */}
 
         <hr className="Projects__hr" />
         <h3 className="InnerBox__TextContent__title">iVe Stock</h3>
