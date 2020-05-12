@@ -26,23 +26,24 @@
 
 .resume__top-section__control-download,
 .resume__top-section__control-close {
-  padding: 0.8rem 1.8rem;
+  border: 1px solid black;
+  padding: 0.5rem 1.5rem;
   margin: 1rem 0.9rem;
   border-radius: 0.4rem;
   cursor: pointer;
-  color: var(--color-main);
+  color: white;
   font-family: "Rajdhani", sans-serif;
   font-size: 1.2rem;
   font-weight: bold;
-  background-color: var(--main-bg-color);
+  background-color: black;
   align-self: center;
   text-transform: uppercase;
 }
 
 .resume__top-section__control-download:hover,
 .resume__top-section__control-close:hover {
-  background-color: var(--color-main);
-  color: var(--main-bg-color);
+  background-color: var(--main-bg-color);
+  color: black;
 }
 
 .resume__top-section__resume__name {
@@ -67,6 +68,7 @@ li {
   background-color: black;
   padding: 0.1rem;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .resume__top-section__links--link {
@@ -79,8 +81,12 @@ li {
   margin: 0;
 }
 
+#twitter {
+  display: none;
+}
+
 .resume__top-section__links--link__text {
-  line-height: 0.5rem;
+  line-height: 1rem;
 }
 
 @media (min-width: 320px) {
@@ -110,6 +116,9 @@ li {
   }
   .resume__top-section__links--link__text {
     line-height: 1.5rem;
+  }
+  #twitter {
+    display: flex;
   }
 }
 @media (min-width: 961px) {

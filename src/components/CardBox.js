@@ -59,10 +59,6 @@ function CardBox(props) {
         open && setOpen(false);
         removeHoverEffectFromArrow();
       }}
-      OnBlur={() => {
-        open && setOpen(false);
-        removeHoverEffectFromArrow();
-      }}
       onTouchStart={() => {
         addHoverEffectToArrow();
       }}

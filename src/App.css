@@ -95,6 +95,7 @@ body {
 
 .ContactFormCotainer {
   position: absolute;
+  left: 0;
   top: 0;
   z-index: 10;
   /* left: 1000px; */
@@ -122,6 +123,7 @@ body {
   }
   .ContactFormCotainer {
     top: 10vh;
+
     z-index: 10;
     width: 80vh;
     left: 20vw;

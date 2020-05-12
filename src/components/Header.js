@@ -2,7 +2,7 @@ import React from "react";
 import ButtonLink from "./ButtonLink";
 import "./Header.css";
 
-function Header({ formDisplay, setFormDisplay }) {
+function Header({ formDisplay, setFormDisplay, CVDisplay, setCVDisplay }) {
   return (
     <div className="Header">
       <div className="Header__personalInfo">
@@ -26,7 +26,7 @@ function Header({ formDisplay, setFormDisplay }) {
           onClick={() => setFormDisplay(!formDisplay)}
         />
         {/* will open a pop up window with cv inside  */}
-        <ButtonLink value="View CV" />
+        <ButtonLink value="View CV" onClick={() => setCVDisplay(!CVDisplay)} />
       </div>
     </div>
   );

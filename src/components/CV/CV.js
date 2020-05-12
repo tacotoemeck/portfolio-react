@@ -15,7 +15,6 @@ const colors = {
 
 function CV(props) {
   const ref = useRef();
-  // console.log(ref);
   useOnClickOutside(ref, () => {
     console.log("clicked outside");
     props.setCVDisplay(false);
@@ -26,16 +25,22 @@ function CV(props) {
       <div className="CV__container">
         <div className="resume__top-section">
           <div className="resume__top-section__controls">
-            <button className="resume__top-section__control-download">
+            <a
+              href={require("./TOM_WAGNER_CV.pdf")}
+              download
+              className="resume__top-section__control-download"
+            >
               DOWNLOAD
-            </button>
+            </a>
             <button
               className="resume__top-section__control-close"
               aria-label="Close this window"
+              onClick={() => props.setCVDisplay(false)}
             >
               X
             </button>
           </div>
+          <hr />
           <h1 className="resume__top-section__resume__name">Tomasz Wagner</h1>
           <div className="resume__top-section__links">
             <div className="resume__top-section__links--link">
@@ -50,7 +55,7 @@ function CV(props) {
                 Tomasz Wagner
               </p>
             </div>
-            <div className="resume__top-section__links--link">
+            <div className="resume__top-section__links--link" id="twitter">
               <TwitterIcon />
               <p className="resume__top-section__links--link__text">
                 TomaszWagner1
@@ -173,6 +178,7 @@ function CV(props) {
           <button
             className="resume__top-section__control-close"
             aria-label="Close this window"
+            onClick={() => props.setCVDisplay(false)}
           >
             X
           </button>

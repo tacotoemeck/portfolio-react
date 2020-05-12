@@ -42,6 +42,11 @@ function Projects(props) {
 
         <hr className="Projects__hr" />
         <h3 className="InnerBox__TextContent__title">iVe Stock</h3>
+        <img
+          className="InnerBox__TextContent__img"
+          src={require("../img/projects/ive.jpg")}
+          alt="iVe application screenshot"
+        />
         <p className="InnerBox__TextContent__paragraph justifySpan">
           <b>NodeJs, Express, JavaScript, MongoDB</b>
           <br></br>
@@ -62,6 +67,11 @@ function Projects(props) {
         </a>
         <hr className="Projects__hr" />
         <h3 className="InnerBox__TextContent__title">Color Picker React</h3>
+        <img
+          className="InnerBox__TextContent__img"
+          src={require("../img/projects/colorPicker.jpg")}
+          alt="Color palette maker application screenshot"
+        />
         <p className="InnerBox__TextContent__paragraph justifySpan">
           <b>React, JavaScript</b>
           <br></br>
@@ -82,7 +92,32 @@ function Projects(props) {
           View on github
         </a>
         <hr className="Projects__hr" />
+        <hr className="Projects__hr" />
+        <h3 className="InnerBox__TextContent__title">Markdown Preview</h3>
+        <img
+          className="InnerBox__TextContent__img"
+          src={require("../img/projects/markdown.jpg")}
+          alt="iVe application screenshot"
+        />
+        <p className="InnerBox__TextContent__paragraph justifySpan">
+          <b>Vanilla JS, marked.js, highlight.js, HTML, CSS</b>
+          <br></br>
+          <br></br>
+          Simple markdown previewer application.
+        </p>
+        <a href="" className="InnerBox__TextContent__link">
+          <GithubIcon
+            mainColor="rgb(119, 79, 56)"
+            className="projectSVGIcons"
+          />
+          View on github
+        </a>
         <h3 className="InnerBox__TextContent__title">Formula Calculator</h3>
+        <img
+          className="InnerBox__TextContent__img"
+          src={require("../img/projects/calculator.jpg")}
+          alt="Calculator application screenshot"
+        />
         <p className="InnerBox__TextContent__paragraph justifySpan">
           <b>Vanilla JavaScript</b>
           <br></br>
@@ -100,8 +135,13 @@ function Projects(props) {
           />
           View on github
         </a>
-        <hr className="Projects__hr" />
+        {/* <hr className="Projects__hr" />
         <h3 className="InnerBox__TextContent__title">FAC19 Project Gallery</h3>
+        <img
+          className="InnerBox__TextContent__img"
+          src={require("../img/projects/pom.jpg")}
+          alt="iVe application screenshot"
+        />
         <p className="InnerBox__TextContent__paragraph justifySpan">
           <b>Node, PostgreSQL, JavaScript</b>
           <br></br>
@@ -120,9 +160,14 @@ function Projects(props) {
             className="projectSVGIcons"
           />
           View on github
-        </a>
+        </a> */}
         <hr className="Projects__hr" />
         <h3 className="InnerBox__TextContent__title">Pomodoro Timer</h3>
+        <img
+          className="InnerBox__TextContent__img"
+          src={require("../img/projects/pom.jpg")}
+          alt="pomodoro timer application screenshot"
+        />
         <p className="InnerBox__TextContent__paragraph justifySpan">
           <b>Vanilla JavaScript</b>
           <br></br>

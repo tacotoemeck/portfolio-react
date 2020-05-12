@@ -30,7 +30,7 @@ const colors = {
 
 function App() {
   const [formDisplay, setFormDisplay] = useState(false);
-  const [CVDisplay, setCVDisplay] = useState(true);
+  const [CVDisplay, setCVDisplay] = useState(false);
 
   // const showForm = () => {
   //   setFormDisplay(!formDisplay);
@@ -46,7 +46,12 @@ function App() {
               src={require("./img/trees.jpeg")}
               alt="background forest"
             />
-            <Header formDisplay={formDisplay} setFormDisplay={setFormDisplay} />
+            <Header
+              formDisplay={formDisplay}
+              setFormDisplay={setFormDisplay}
+              CVDisplay={CVDisplay}
+              setCVDisplay={setCVDisplay}
+            />
           </header>
           <main className="mainBody">
             <div className="ContactFormCotainer">
