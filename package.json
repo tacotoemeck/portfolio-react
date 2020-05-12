@@ -3,13 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@phuocng/react-pdf-viewer": "^1.6.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "emailjs-com": "^2.4.1",
+    "pdfjs-dist": "^2.3.200",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-onclickoutside": "^6.9.0",
+    "react-pdf": "^4.1.0",
     "react-scripts": "3.4.1",
     "react-transition-group": "^4.3.0"
   },

@@ -4,6 +4,7 @@ import CardBox from "./components/CardBox";
 import CardBoxSlider from "./components/CardBoxSlider";
 import FooterComponent from "./components/Footer";
 import ContactForm from "./components/ContactForm";
+import CV from "./components/CV/CV";
 import "./App.css";
 
 // import SVG icon components
@@ -29,6 +30,7 @@ const colors = {
 
 function App() {
   const [formDisplay, setFormDisplay] = useState(false);
+  const [CVDisplay, setCVDisplay] = useState(true);
 
   // const showForm = () => {
   //   setFormDisplay(!formDisplay);
@@ -49,6 +51,9 @@ function App() {
           <main className="mainBody">
             <div className="ContactFormCotainer">
               {formDisplay && <ContactForm setFormDisplay={setFormDisplay} />}
+            </div>
+            <div className="CVContainer">
+              {CVDisplay && <CV setCVDisplay={setCVDisplay} />}
             </div>
 
             <CardBox

@@ -6,6 +6,8 @@ function LinkedinIcon(props) {
     backgroundColor: props.background || "#FFF",
   };
 
+  console.log(props.color);
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

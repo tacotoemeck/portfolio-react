@@ -1,0 +1,134 @@
+.CV {
+  position: absolute;
+  z-index: 10;
+  background-color: var(--main-bg-color);
+  top: 0;
+  left: 0;
+  padding-bottom: 2rem;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: -8px 6px 16px 5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -8px 6px 16px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -8px 6px 16px -5px rgba(0, 0, 0, 0.75);
+}
+
+.CV__container {
+  color: black;
+  overflow-x: auto;
+  padding: 0.2rem;
+}
+
+.resume__top-section__controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resume__top-section__control-download,
+.resume__top-section__control-close {
+  padding: 0.8rem 1.8rem;
+  margin: 1rem 0.9rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  color: var(--color-main);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: var(--main-bg-color);
+  align-self: center;
+  text-transform: uppercase;
+}
+
+.resume__top-section__control-download:hover,
+.resume__top-section__control-close:hover {
+  background-color: var(--color-main);
+  color: var(--main-bg-color);
+}
+
+.resume__top-section__resume__name {
+  font-size: 1rem;
+}
+
+.CV__container,
+h2 {
+  font-size: 1rem;
+}
+
+.CV__container,
+li {
+  font-size: 0.8rem;
+}
+
+.resume__top-section__links {
+  height: 1rem;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: black;
+  padding: 0.1rem;
+  justify-content: space-around;
+}
+
+.resume__top-section__links--link {
+  display: flex;
+  flex-direction: row;
+}
+
+.resume__top-section__links--link > * {
+  height: 1rem;
+  margin: 0;
+}
+
+.resume__top-section__links--link__text {
+  line-height: 0.5rem;
+}
+
+@media (min-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+  .BottomBoxTitle {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .CV {
+    width: 80vw;
+    left: 10vw;
+  }
+}
+@media (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .resume__top-section__resume__name {
+    font-size: 1.5rem;
+  }
+  .resume__top-section__links {
+    height: 1.5rem;
+    padding: 0.4rem;
+  }
+  .resume__top-section__links--link > * {
+    height: 1.5rem;
+  }
+  .resume__top-section__links--link__text {
+    line-height: 1.5rem;
+  }
+}
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .CV {
+    width: 70vw;
+    left: 15vw;
+  }
+  .CV__container {
+    padding: 1rem;
+  }
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+  .CV {
+    width: 60vw;
+    left: 20vw;
+  }
+}
