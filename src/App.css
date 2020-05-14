@@ -1,6 +1,6 @@
 :root {
   --main-bg-color: rgb(230, 230, 230);
-  --color-brighter: rgba(119, 79, 56, 0.7);
+  --color-brighter: rgba(119, 79, 56, 0.5);
   --color-main: rgb(119, 79, 56);
   --color-darker: rgba(38, 0, 0, 0.9);
 }

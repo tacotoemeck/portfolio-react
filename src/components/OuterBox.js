@@ -8,6 +8,8 @@ function OuterBox(props) {
     iconsDiv: undefined,
   };
 
+  console.log(props.icons);
+
   // add class depending on a color background
   const backgroundColorClass = {
     white: "",

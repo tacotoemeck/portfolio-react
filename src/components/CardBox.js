@@ -11,6 +11,7 @@ function CardBox(props) {
   const [buttonArrowStateStyle, setbuttonArrowStateStyle] = useState(
     "CarBoxExpandButton__arrow"
   );
+  // const [isHovered, setIsHoevered] = useState(false);
 
   const ref = useRef();
 
@@ -45,6 +46,18 @@ function CardBox(props) {
     setOpen(!open);
   }
 
+  // do not delete below! it will work for passing state to a component
+
+  // // adding props to props for svg animations
+  // let icon = React.Children.toArray(props.icons);
+  // if (Array.from(icon).length === 0) {
+  //   // clone elements so props can be passed to it
+
+  //   if (icon.length === 1) {
+  //     icon = React.cloneElement(icon[0], { isHovered: isHovered });
+  //   }
+  // }
+
   return (
     <div
       ref={ref}
@@ -78,6 +91,7 @@ function CardBox(props) {
             subtitle={props.subtitle}
             subtitleClass={props.subtitleClass}
             title={props.title}
+            // icons={Array.from(icon)} // how to pass on state to a component's prop?
             icons={props.icons}
             bottomBackground={props.bottomBackground}
             topBackground={props.topBackground}
@@ -98,36 +112,5 @@ function CardBox(props) {
     </div>
   );
 }
-
-// Hook
-// function useOnClickOutside(ref, handler) {
-//   useEffect(
-//     () => {
-//       const listener = (event) => {
-//         // Do nothing if clicking ref's element or descendent elements
-//         if (!ref.current || ref.current.contains(event.target)) {
-//           return;
-//         }
-
-//         handler(event);
-//       };
-
-//       document.addEventListener("mousedown", listener);
-//       document.addEventListener("touchstart", listener);
-
-//       return () => {
-//         document.removeEventListener("mousedown", listener);
-//         document.removeEventListener("touchstart", listener);
-//       };
-//     },
-//     // Add ref and handler to effect dependencies
-//     // It's worth noting that because passed in handler is a new ...
-//     // ... function on every render that will cause this effect ...
-//     // ... callback/cleanup to run every render. It's not a big deal ...
-//     // ... but to optimize you can wrap handler in useCallback before ...
-//     // ... passing it into this hook.
-//     [ref, handler]
-//   );
-// }
 
 export default CardBox;
